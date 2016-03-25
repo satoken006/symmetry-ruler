@@ -24,9 +24,6 @@ function setup(){
 
 function draw(){
 	background(back_c);
-
-	//text(isDrawable, 100, 100);
-	//text(s_list.length, 100, 120);
 	
 	stroke(153);
 	strokeWeight(1);

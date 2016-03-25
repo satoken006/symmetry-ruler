@@ -78,37 +78,17 @@ $(document).ready( function(){
 		var blob = Base64toBlob(base64);
 		saveBlob(blob, getFileNameFromDate());
 
-		// **************************************************
-		// **************************************************
-
-	    // body部パラメーター
-	    var d = {};
-	    // Canvasのデータをbase64でエンコードした文字列を取得
 	    var canvasData = canvas.toDataURL();
-	    //alert(canvasData);
-
-	    // 不要な情報を取り除く
 	    canvasData = canvasData.replace(/^data:image\/png;base64,/, '');
 
+	    var d = {};
 	    d.image = canvasData;
-
 	    $.ajax({
 	        url: 'http://satoken.nkmr.io/2015/SymmetryRuler/receive_file.php',
 	        type: 'POST',
-	        success: function() {
-	            // 成功時の処理
-	            //alert("success");
-	        },
-	        error(jqXHR, textStatus, errorThrown) {
-	            // 失敗時の処理
-	            //alert("failed");
-	        },
 	        data: d,
 	        dataType: 'json'
 	    });
-	    
-		// **************************************************
-		// **************************************************
 
 		isShowingRuledLines = true;
 	} );
