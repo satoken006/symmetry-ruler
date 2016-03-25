@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Language" content="ja" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.3.11/p5.min.js"></script>
+	<script src="../../js/p5.dom.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" href="../img/SymmetryRuler/sym_ruler_20151121175425.png">
+	<title>対称定規</title>
+</head>
+
+<body>
+	<div id="tool">
+		<h1>対称定規</h1>
+		<div>
+			<input type="checkbox" class="ruledLines" checked>罫線を表示
+		</div>
+		<div>
+			<input type="radio" name="s" class="symmetry" value="0">線対称
+			<input type="radio" name="s" class="symmetry" value="1" checked>点対称
+		</div>
+		<div id="weight" class="slider">
+			<p>太さ</p>
+		</div>
+
+		<table>
+		<tr>
+			<td>
+				<div id="red" class="slider">
+					<p>R</p>
+				</div>
+			</td>
+			<td>
+				<div id="back_red" class="slider">
+					<p>背景R</p>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div id="green" class="slider">
+					<p>G</p>
+				</div>
+			</td>
+			<td>
+				<div id="back_green" class="slider">
+					<p>背景G</p>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div id="blue" class="slider">
+					<p>B</p>
+				</div>
+			</td>
+			<td>
+				<div id="back_blue" class="slider">
+					<p>背景B</p>
+				</div>
+			</td>
+		</tr>
+		</table>
+
+		<div>
+			繰り返し数<input type="number" class="iteration" value="8" min="1"><br>
+		</div>
+		<button id="undoButton">
+			一画戻す
+		</button>
+		<button id="clearButton">
+			クリア
+		</button>
+		<button id="saveButton">
+			保存
+		</button>
+		<div id="linePreview"></div>
+	</div>
+	
+	<script src="../moji_exp2/write/Spline.js"></script>
+	<script src="Line.js"></script>
+	<script src="Stroke.js"></script>
+	<script src="SymmetryRuler.js"></script>
+	<script src="LinePreview.js"></script>
+	<script src="Function.js"></script>
+	
+    <form method="post" accept-charset="utf-8" name="form1">
+        <input name="hidden_data" id='hidden_data' type="hidden"/>
+    </form>
+</body>
+
+</html>

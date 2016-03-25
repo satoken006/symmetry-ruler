@@ -1,0 +1,46 @@
+body{
+	background-color: #ccc;
+	display: inline-block;
+}
+
+#tool{
+	float:left;
+	margin: 10px 10px 10px 10px;
+}
+
+#linePreview{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.ruledLines, .symmetry{
+	width: 35px;
+	height: 35px;
+}
+
+button{
+	width: 100px;
+	margin: 10px 10px 10px 10px;
+	font-size: 22px;
+}
+
+.slider{
+	width: 150px;
+	margin: 30px 10px 30px 10px;
+}
+
+.iteration{
+	width: 80px;
+	height: 40px;
+	margin-left: 20px;
+	font-size: 22px;
+	text-align: center;
+}
+
+p{
+	margin: 15px 10px 15px 10px;
+}
+
+form, #defaultCanvas{
+	float: left;
+}
